@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div class="start-screen" id="mss">
+    <h1 class="start-game comfortaa-bold">START GAME</h1>
+    <p class="comfortaa-light">Press <span class="fake-button">Space</span></p>
+    </div>
+    <!-- Game -->
+    <div class="game" id="game">
+        <!-- User Hp Bar -->
+        <div class="user-hp-bar">
+            <div class="hp">
+                <div class="hp-border"></div>
+            </div>
+            <img src="Assets/Heart.png" alt="" class="heart">
+        </div>
+        <!-- User Choices -->
+        <div class="choices">
+        <div class="rockcontainer" id="bc1">
+            <button id="rocka" onmouseover="hoveredRock()">
+            <img src="Assets/Rock.png" class="rock" id="rockimg">
+            </button>
+        </div>
+        <div class="papercontainer" id="bc2">
+            <button id="papera" onmouseover="hoveredPaper()">
+            <img src="Assets/Paper.png" class="paper" id="paperimg">
+        </button>
+        </div>
+        <div class="scissorcontainer" id="bc3">
+            <button id="scissora" onmouseover="hoveredScissors()">
+            <img src="Assets/Scissors.png" class="scissors" id="scissorimg"></button>
+        </div>
+        </div>
+        <!-- Backdrop -->
+         <div class="backdrop" id="backdrop"></div>
+        <!-- User Hand -->
+         <div class="UserHand">
+        <img src="Assets/Rock.png" class="ush rockhand user" id="roh">
+        <img src="Assets/Paper.png" class="ush paperhand" id="pah">
+        <img src="Assets/Scissors.png" class="ush scissorhand" id="sch">
+        </div>
+        <!-- Opponent's Hand -->
+        <div class="OppHand">
+            <img src="Assets/Rock.png" class="coh rockhandp" id="rohp">
+            <img src="Assets/Paper.png" class="coh paperhandp" id="pahp">
+            <img src="Assets/Scissors.png" class="coh scissorhandp" id="schp">
+            </div>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>

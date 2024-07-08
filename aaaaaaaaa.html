@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .lower {
+            z-index: 1;
+        }
+
+        .higher {
+            z-index: 2;
+        }
+        #div1 {
+            left: 20px;
+        }
+        #div2 {
+            left: 40px;
+        }
+        #div3 {
+            left: 60px;
+        }
+        .myDiv {
+            position: fixed; /* Ensure that z-index works as expected */
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="myDiv lower" id="div1">Div 1</div>
+<div class="myDiv lower" id="div2">Div 2</div>
+<div class="myDiv lower" id="div3">Div 3</div>
+
+<script>
+    document.querySelectorAll('.myDiv').forEach(div => {
+        div.addEventListener('click', function() {
+            // Remove the 'higher' class and add 'lower' class to all divs
+            document.querySelectorAll('.myDiv').forEach(d => {
+                d.classList.remove('higher');
+                d.classList.add('lower');
+            });
+
+            // Add the 'higher' class to the clicked div
+            this.classList.remove('lower');
+            this.classList.add('higher');
+        });
+    });
+</script>
+
+</body>
+</html>
